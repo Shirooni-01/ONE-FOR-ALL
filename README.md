@@ -146,4 +146,4 @@ This project is licensed under the MIT License.
 
 ## 👨‍💻 Author
 
-Made by **King**
+Made by **ASHUTOSH SHIOORKAR**
