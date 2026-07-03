@@ -138,12 +138,6 @@ Screenshots will be added after the project is completed.
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License.
-
----
-
 ## 👨‍💻 Author
 
 Made by **ASHUTOSH SHIOORKAR**
