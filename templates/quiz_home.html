@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz | One For All</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/quiz.css') }}">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="bg1"></div>
+<div class="bg2"></div>
+
+<div class="container">
+
+    <header>
+
+        <a href="/" class="back-btn">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+        </a>
+
+        <h1>
+
+            Quiz Master
+
+        </h1>
+
+        <p>
+
+            Challenge yourself with thousands of questions.
+
+        </p>
+
+    </header>
+
+
+    <form method="POST" class="quiz-card">
+
+
+        <div class="form-group">
+
+            <label>
+
+                <i class="fa-solid fa-list-ol"></i>
+
+                Number of Questions
+
+            </label>
+
+            <select name="no_ques">
+
+                <option value="5">5</option>
+
+                <option value="10" selected>10</option>
+
+                <option value="15">15</option>
+
+                <option value="20">20</option>
+
+                <option value="25">25</option>
+
+            </select>
+
+        </div>
+
+
+
+        <div class="form-group">
+
+            <label>
+
+                <i class="fa-solid fa-layer-group"></i>
+
+                Category
+
+            </label>
+
+            <select name="category">
+
+                <option value="9">General Knowledge</option>
+
+                <option value="18">Computer Science</option>
+
+                <option value="17">Science & Nature</option>
+
+                <option value="21">Sports</option>
+
+                <option value="23">History</option>
+
+                <option value="22">Geography</option>
+
+                <option value="27">Animals</option>
+
+                <option value="11">Movies</option>
+
+                <option value="12">Music</option>
+
+                <option value="15">Video Games</option>
+
+            </select>
+
+        </div>
+
+
+
+        <div class="form-group">
+
+            <label>
+
+                <i class="fa-solid fa-signal"></i>
+
+                Difficulty
+
+            </label>
+
+            <select name="diff">
+
+                <option value="easy">
+
+                    Easy
+
+                </option>
+
+                <option value="medium" selected>
+
+                    Medium
+
+                </option>
+
+                <option value="hard">
+
+                    Hard
+
+                </option>
+
+            </select>
+
+        </div>
+
+
+
+
+        <div class="form-group">
+
+            <label>
+
+                <i class="fa-solid fa-circle-question"></i>
+
+                Question Type
+
+            </label>
+
+            <select name="type">
+
+                <option value="multiple">
+
+                    Multiple Choice
+
+                </option>
+
+                <option value="boolean">
+
+                    True / False
+
+                </option>
+
+            </select>
+
+        </div>
+
+
+
+
+        <button class="start-btn">
+
+            <i class="fa-solid fa-play"></i>
+
+            Start Quiz
+
+        </button>
+
+    </form>
+
+
+
+    <section class="features">
+
+        <div class="feature">
+
+            <i class="fa-solid fa-brain"></i>
+
+            <h3>
+
+                Thousands of Questions
+
+            </h3>
+
+            <p>
+
+                Powered by Open Trivia Database.
+
+            </p>
+
+        </div>
+
+        <div class="feature">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <h3>
+
+                Track Progress
+
+            </h3>
+
+            <p>
+
+                Score and percentage after every quiz.
+
+            </p>
+
+        </div>
+
+        <div class="feature">
+
+            <i class="fa-solid fa-award"></i>
+
+            <h3>
+
+                Earn Grades
+
+            </h3>
+
+            <p>
+
+                A to F grading based on your performance.
+
+            </p>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/quiz.js') }}"></script>
+
+</body>
+
+</html>

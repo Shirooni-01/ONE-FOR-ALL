@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Unit Converter | One For All</title>
+
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/unit.css') }}"> -->
+    <link rel="stylesheet" href="/static/css/unit.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="bg1"></div>
+    <div class="bg2"></div>
+
+    <div class="container">
+
+        <!-- =========================
+            HEADER
+    ========================== -->
+
+        <header>
+
+            <a href="/" class="back-btn">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+            </a>
+
+            <h1>
+
+                Unit Converter
+
+            </h1>
+
+            <p>
+
+                Convert values instantly across multiple categories.
+
+            </p>
+
+        </header>
+
+
+        <!-- =========================
+        MAIN GRID
+    ========================== -->
+
+        <div class="main-grid">
+
+            <!-- =========================
+            CONVERTER CARD
+        ========================== -->
+
+            <section class="converter-card">
+
+                <h2>
+
+                    Converter
+
+                </h2>
+
+
+                <div class="field">
+
+                    <label>
+
+                        Category
+
+                    </label>
+
+                    <select id="category">
+
+                        <option value="length">
+
+                            Length
+
+                        </option>
+
+                        <option value="weight">
+
+                            Weight
+
+                        </option>
+
+                        <option value="volume">
+
+                            Volume
+
+                        </option>
+
+                        <option value="time">
+
+                            Time
+
+                        </option>
+
+                        <option value="storage">
+
+                            Storage
+
+                        </option>
+
+                        <option value="temperature">
+
+                            Temperature
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="field">
+
+                    <label>
+
+                        Value
+
+                    </label>
+
+                    <input type="number" id="value" placeholder="Enter value">
+
+                </div>
+
+
+
+                <div class="row">
+
+                    <div class="field">
+
+                        <label>
+
+                            From
+
+                        </label>
+
+                        <select id="fromUnit">
+
+                        </select>
+
+                    </div>
+
+                    <button id="swapBtn" class="swap-btn" type="button">
+
+                        <i class="fa-solid fa-right-left"></i>
+
+                    </button>
+
+                    <div class="field">
+
+                        <label>
+
+                            To
+
+                        </label>
+
+                        <select id="toUnit">
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <button id="convertBtn" class="convert-btn">
+
+                    <i class="fa-solid fa-arrows-rotate"></i>
+
+                    Convert
+
+                </button>
+
+            </section>
+
+
+
+            <!-- =========================
+            RESULT
+        ========================== -->
+
+            <section class="result-card">
+
+                <h2>
+
+                    Result
+
+                </h2>
+
+                <div class="result-display">
+
+                    <span id="result">
+
+                        0
+
+                    </span>
+
+                </div>
+
+                <button id="copyBtn" class="copy-btn">
+
+                    <i class="fa-regular fa-copy"></i>
+
+                    Copy Result
+
+                </button>
+
+                <div class="tips">
+
+                    <h3>
+
+                        Quick Tips
+
+                    </h3>
+
+                    <ul>
+
+                        <li>
+
+                            Live conversion while typing.
+
+                        </li>
+
+                        <li>
+
+                            Use the swap button to reverse units.
+
+                        </li>
+
+                        <li>
+
+                            Supports six conversion categories.
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+
+        <!-- =========================
+        POPULAR CONVERSIONS
+    ========================== -->
+
+        <section class="popular">
+
+            <h2>
+
+                Popular Conversions
+
+            </h2>
+
+            <div class="popular-grid">
+
+                <div class="popular-card">
+
+                    <h3>
+
+                        Length
+
+                    </h3>
+
+                    <p>1 Kilometer = 1000 Meter</p>
+                    <p>1 Meter = 100 Centimeter</p>
+                    <p>1 Inch = 2.54 Centimeter</p>
+
+                </div>
+
+                <div class="popular-card">
+
+                    <h3>
+
+                        Weight
+
+                    </h3>
+
+                    <p>1 Kilogram = 1000 Gram</p>
+                    <p>1 Pound = 0.453592 Kilogram</p>
+                    <p>1 Ounce = 28.35 Gram</p>
+
+                </div>
+
+                <div class="popular-card">
+
+                    <h3>
+
+                        Temperature
+
+                    </h3>
+
+                    <p>°F = (°C × 9/5) + 32</p>
+                    <p>°C = (°F − 32) × 5/9</p>
+                    <p>K = °C + 273.15</p>
+
+                </div>
+
+                <div class="popular-card">
+
+                    <h3>
+
+                        Storage
+
+                    </h3>
+
+                    <p>1 KB = 1024 Bytes</p>
+                    <p>1 MB = 1024 KB</p>
+                    <p>1 GB = 1024 MB</p>
+
+                </div>
+
+                <div class="popular-card">
+
+                    <h3>
+
+                        Volume
+
+                    </h3>
+
+                    <p>1 Liter = 1000 Milliliters</p>
+                    <p>1 Gallon = 3.785 Liters</p>
+                    <p>1 Cubic Meter = 1000 Liters</p>
+
+                </div>
+
+                <div class="popular-card">
+
+                    <h3>
+
+                        Time
+
+                    </h3>
+
+                    <p>1 Minute = 60 Seconds</p>
+                    <p>1 Hour = 60 Minutes</p>
+                    <p>1 Day = 24 Hours</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+            INFORMATION
+    ========================== -->
+
+        <section class="info-section">
+
+            <h2>
+
+                About This Converter
+
+            </h2>
+
+            <div class="info-grid">
+
+                <div class="info-card">
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                    <h3>
+
+                        Instant Conversion
+
+                    </h3>
+
+                    <p>
+
+                        Results update automatically while typing,
+                        making calculations fast and effortless.
+
+                    </p>
+
+                </div>
+
+                <div class="info-card">
+
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+                    <h3>
+
+                        Smart Unit Swap
+
+                    </h3>
+
+                    <p>
+
+                        Swap source and destination units with a
+                        single click.
+
+                    </p>
+
+                </div>
+
+                <div class="info-card">
+
+                    <i class="fa-solid fa-copy"></i>
+
+                    <h3>
+
+                        Copy Results
+
+                    </h3>
+
+                    <p>
+
+                        Copy converted values instantly for use in
+                        assignments, projects, or calculations.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+            FORMULAS
+    ========================== -->
+
+        <section class="formula-section">
+
+            <h2>
+
+                Common Conversion Formulas
+
+            </h2>
+
+            <div class="formula-grid">
+
+                <div class="formula-card">
+
+                    <h3>
+
+                        Temperature
+
+                    </h3>
+
+                    <p>
+
+                        °F = (°C × 9 / 5) + 32
+
+                    </p>
+
+                    <p>
+
+                        K = °C + 273.15
+
+                    </p>
+
+                </div>
+
+                <div class="formula-card">
+
+                    <h3>
+
+                        Length
+
+                    </h3>
+
+                    <p>
+
+                        1 km = 1000 m
+
+                    </p>
+
+                    <p>
+
+                        1 m = 100 cm
+
+                    </p>
+
+                </div>
+
+                <div class="formula-card">
+
+                    <h3>
+
+                        Weight
+
+                    </h3>
+
+                    <p>
+
+                        1 kg = 1000 g
+
+                    </p>
+
+                    <p>
+
+                        1 lb = 0.453592 kg
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- <script src="{{ url_for('static', filename='js/unit.js') }}"></script> -->
+    <script src="/static/js/unit.js"></script>
+
+</body>
+
+</html>

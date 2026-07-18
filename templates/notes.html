@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes | One For All</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/notes.css') }}">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="bg-circle circle1"></div>
+    <div class="bg-circle circle2"></div>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header class="topbar">
+
+            <div class="left">
+
+                <a href="/" class="back-btn">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+
+                <div>
+                    <h1>Notes</h1>
+                    <p>Create and manage your notes.</p>
+                </div>
+
+            </div>
+
+            <div class="right">
+
+                <button id="searchnote" class="icon-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+                <button id="newnote" class="primary-btn">
+                    <i class="fa-solid fa-plus"></i>
+                    New Note
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+
+
+        <!-- Search -->
+
+        <form method="POST" id="searchform" class="glass-card search-form">
+
+            <input
+                type="text"
+                id="search"
+                name="search"
+                placeholder="Search note by title...">
+
+            <button id="searchsubmit" type="submit">
+                Search
+            </button>
+
+        </form>
+
+
+
+
+        <!-- Create -->
+
+        <form method="POST" id="noteform" class="glass-card note-form">
+
+            <h2>Create New Note</h2>
+
+            <input
+                type="text"
+                name="title"
+                id="title"
+                placeholder="Note Title"
+                required>
+
+            <textarea
+                name="note"
+                id="note"
+                rows="8"
+                placeholder="Write your note here..."
+                required></textarea>
+
+            <button id="submit" type="submit">
+                Save Note
+            </button>
+
+        </form>
+
+
+
+
+        <!-- Search Result -->
+
+        {% if searchednote %}
+
+        <div class="glass-card searchednote">
+
+            <div class="note-head">
+
+                <h2>{{ searchednote.title }}</h2>
+
+            </div>
+
+            <div class="note-body">
+
+                {{ searchednote.note }}
+
+            </div>
+
+            <div class="note-footer">
+
+                <span>
+                    <i class="fa-regular fa-clock"></i>
+                    {{ searchednote.time }}
+                </span>
+
+            </div>
+
+        </div>
+
+        {% endif %}
+
+
+
+
+
+        <!-- Notes -->
+
+        <section class="notes-grid">
+
+            {% for note in notes %}
+
+            <div class="note-card">
+
+                <!-- Preview -->
+
+                <div class="titleslist">
+
+                    <h3>
+
+                        {{ note.title }}
+
+                    </h3>
+
+                    <p>
+
+                        {{ note.note[:100] }}...
+
+                    </p>
+
+                    <small>
+
+                        {{ note.time }}
+
+                    </small>
+
+                </div>
+
+
+
+                <!-- Expand -->
+
+                <div class="noteslist">
+
+                    <div class="expanded-head">
+
+                        <h2>
+
+                            {{ note.title }}
+
+                        </h2>
+
+                    </div>
+
+                    <div class="expanded-body">
+
+                        {{ note.note }}
+
+                    </div>
+
+                    <div class="expanded-footer">
+
+                        <span>
+
+                            <i class="fa-regular fa-clock"></i>
+
+                            {{ note.time }}
+
+                        </span>
+
+                    </div>
+
+
+
+
+
+                    <div class="actions">
+
+                        <button
+                            type="button"
+                            class="editnote">
+
+                            <i class="fa-solid fa-pen"></i>
+
+                            Edit
+
+                        </button>
+
+                        <form
+                            method="POST"
+                            class="deletenote_form">
+
+                            <input
+                                type="hidden"
+                                name="index_del"
+                                value="{{ loop.index0 }}">
+
+                            <button
+                                type="submit"
+                                class="deletenote"
+                                name="delete"
+                                value="Delete">
+
+                                <i class="fa-solid fa-trash"></i>
+
+                                Delete
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+
+
+
+
+                    <!-- Edit -->
+
+                    <form
+                        method="POST"
+                        class="editnote_form">
+
+                        <input
+                            type="hidden"
+                            name="index"
+                            value="{{ loop.index0 }}">
+
+                        <input
+                            type="text"
+                            name="editedtitle"
+                            placeholder="New Title">
+
+                        <textarea
+                            name="editednote"
+                            rows="6"
+                            placeholder="Update note..."></textarea>
+
+                        <button
+                            class="submiteditednote"
+                            type="submit">
+
+                            Save Changes
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </section>
+
+
+
+
+        {% if notes|length == 0 %}
+
+        <div class="empty-state">
+
+            <i class="fa-regular fa-note-sticky"></i>
+
+            <h2>No Notes Yet</h2>
+
+            <p>Create your first note to get started.</p>
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+
+
+    <script src="{{ url_for('static', filename='js/notes.js') }}"></script>
+
+</body>
+
+</html>

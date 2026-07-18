@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Text Utilities Hub | One For All</title>
+
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/text.css') }}"> -->
+     <link rel="stylesheet" href="/static/css/text.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="bg1"></div>
+    <div class="bg2"></div>
+
+    <div class="container">
+
+        <!-- =========================
+            HEADER
+    ========================== -->
+
+        <header>
+
+            <a href="/" class="back-btn">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+            </a>
+
+            <h1>
+
+                Text Utilities Hub
+
+            </h1>
+
+            <p>
+
+                Edit, format and analyze your text instantly.
+
+            </p>
+
+        </header>
+
+
+
+        <!-- =========================
+            MAIN GRID
+    ========================== -->
+
+        <div class="main-grid">
+
+            <!-- =========================
+                EDITOR
+        ========================== -->
+
+            <section class="editor-card">
+
+                <h2>
+
+                    Text Editor
+
+                </h2>
+
+                <textarea id="textInput" placeholder="Start typing here..."></textarea>
+
+
+
+                <div class="button-grid">
+
+                    <button id="uppercaseBtn" class="primary-btn">
+
+                        <i class="fa-solid fa-arrow-up-a-z"></i>
+
+                        Uppercase
+
+                    </button>
+
+                    <button id="lowercaseBtn" class="primary-btn">
+
+                        <i class="fa-solid fa-arrow-down-a-z"></i>
+
+                        Lowercase
+
+                    </button>
+
+                    <button id="capitalizeBtn" class="primary-btn">
+
+                        <i class="fa-solid fa-font"></i>
+
+                        Capitalize
+
+                    </button>
+
+                    <button id="removeSpacesBtn" class="primary-btn">
+
+                        <i class="fa-solid fa-broom"></i>
+
+                        Remove Spaces
+
+                    </button>
+
+                    <button id="reverseBtn" class="primary-btn">
+
+                        <i class="fa-solid fa-arrow-rotate-left"></i>
+
+                        Reverse
+
+                    </button>
+
+                    <button id="clearBtn" class="danger-btn">
+
+                        <i class="fa-solid fa-trash"></i>
+
+                        Clear
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                PREVIEW
+        ========================== -->
+
+            <section class="preview-card">
+
+                <h2>
+
+                    Live Preview
+
+                </h2>
+
+                <div id="previewBox">
+
+                    Your text will appear here...
+
+                </div>
+
+                <div class="button-row">
+
+                    <button id="copyBtn" class="secondary-btn">
+
+                        <i class="fa-regular fa-copy"></i>
+
+                        Copy
+
+                    </button>
+
+                    <button id="downloadBtn" class="secondary-btn">
+
+                        <i class="fa-solid fa-download"></i>
+
+                        Download
+
+                    </button>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+
+        <!-- =========================
+            STATS
+    ========================== -->
+
+        <section class="stats-section">
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <i class="fa-solid fa-file-word"></i>
+
+                    <h3>
+
+                        Words
+
+                    </h3>
+
+                    <span id="wordCount">
+
+                        0
+
+                    </span>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <i class="fa-solid fa-keyboard"></i>
+
+                    <h3>
+
+                        Characters
+
+                    </h3>
+
+                    <span id="charCount">
+
+                        0
+
+                    </span>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <i class="fa-solid fa-book-open-reader"></i>
+
+                    <h3>
+
+                        Reading Time
+
+                    </h3>
+
+                    <span id="readingTime">
+
+                        0 min
+
+                    </span>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <i class="fa-solid fa-align-left"></i>
+
+                    <h3>
+
+                        Lines
+
+                    </h3>
+
+                    <span id="lineCount">
+
+                        1
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+            FEATURES
+    ========================== -->
+
+        <section class="features">
+
+            <h2>
+
+                Features
+
+            </h2>
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-font"></i>
+
+                    <h3>
+
+                        Text Formatting
+
+                    </h3>
+
+                    <p>
+
+                        Convert text to uppercase, lowercase,
+                        capitalize words and remove extra spaces.
+
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-chart-simple"></i>
+
+                    <h3>
+
+                        Live Statistics
+
+                    </h3>
+
+                    <p>
+
+                        View words, characters and estimated
+                        reading time while typing.
+
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-copy"></i>
+
+                    <h3>
+
+                        Copy & Download
+
+                    </h3>
+
+                    <p>
+
+                        Copy processed text or download it as
+                        a text file instantly.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+            TIPS
+    ========================== -->
+
+        <section class="tips-section">
+
+            <h2>
+
+                Quick Tips
+
+            </h2>
+
+            <div class="tips-grid">
+
+                <div class="tip-card">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                    <p>
+
+                        Paste any paragraph to instantly view
+                        live statistics.
+
+                    </p>
+
+                </div>
+
+                <div class="tip-card">
+
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                    <p>
+
+                        Clean up text by removing extra spaces
+                        before copying.
+
+                    </p>
+
+                </div>
+
+                <div class="tip-card">
+
+                    <i class="fa-solid fa-download"></i>
+
+                    <p>
+
+                        Save your processed text as a TXT file
+                        for later use.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+    <!-- =========================
+        TOAST
+========================== -->
+
+    <div id="toast" class="toast">
+
+        Done
+
+    </div>
+
+
+
+    <!-- <script src="{{ url_for('static', filename='js/text.js') }}"></script> -->
+    <script src="/static/js/text.js"></script>
+
+</body>
+
+</html>

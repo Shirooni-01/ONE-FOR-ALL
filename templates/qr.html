@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>QR Generator | One For All</title>
+<!-- 
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/qr.css') }}"> -->
+
+    <link    rel="stylesheet"
+        href="/static/css/qr.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="bg1"></div>
+<div class="bg2"></div>
+
+<div class="container">
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <a href="/" class="back-btn">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+        </a>
+
+        <h1>
+
+            QR Generator & Scanner
+
+        </h1>
+
+        <p>
+
+            Generate, download, share and scan QR codes instantly.
+
+        </p>
+
+    </header>
+
+
+
+    <div class="main-grid">
+
+        <!-- ==========================================
+                    GENERATOR
+        =========================================== -->
+
+        <section class="generator-card">
+
+            <h2>
+
+                Generate QR Code
+
+            </h2>
+
+            <div class="input-group">
+
+                <input
+
+                    id="qrInput"
+
+                    type="text"
+
+                    placeholder="Enter text or website URL">
+
+            </div>
+
+            <div class="button-group">
+
+                <button id="generateBtn" class="primary-btn">
+
+                    <i class="fa-solid fa-qrcode"></i>
+
+                    Generate
+
+                </button>
+
+                <button id="downloadBtn" class="secondary-btn">
+
+                    <i class="fa-solid fa-download"></i>
+
+                    Download
+
+                </button>
+
+                <button id="shareBtn" class="secondary-btn">
+
+                    <i class="fa-solid fa-share-nodes"></i>
+
+                    Share
+
+                </button>
+
+            </div>
+
+            <div class="qr-preview">
+
+                <div id="qrcode"></div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+                    SCANNER
+        =========================================== -->
+
+        <section class="scanner-card">
+
+            <h2>
+
+                QR Scanner
+
+            </h2>
+
+            <button id="scanBtn" class="primary-btn">
+
+                <i class="fa-solid fa-camera"></i>
+
+                Scan QR Code
+
+            </button>
+
+            <div id="reader"></div>
+
+            <div class="result-box">
+
+                <label>
+
+                    Scanned Result
+
+                </label>
+
+                <textarea
+
+                    id="resultText"
+
+                    readonly
+
+                    placeholder="Scanned QR data will appear here...">
+
+                </textarea>
+
+            </div>
+
+            <div class="button-group">
+
+                <button id="copyBtn" class="secondary-btn">
+
+                    <i class="fa-regular fa-copy"></i>
+
+                    Copy
+
+                </button>
+
+                <button id="openBtn" class="secondary-btn">
+
+                    <i class="fa-solid fa-up-right-from-square"></i>
+
+                    Open Link
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+    <!-- ==========================================
+                FEATURES
+    =========================================== -->
+
+    <section class="features">
+
+        <div class="feature">
+
+            <i class="fa-solid fa-bolt"></i>
+
+            <h3>
+
+                Instant Generation
+
+            </h3>
+
+            <p>
+
+                Create QR codes for text or URLs in seconds.
+
+            </p>
+
+        </div>
+
+        <div class="feature">
+
+            <i class="fa-solid fa-mobile-screen"></i>
+
+            <h3>
+
+                Mobile Sharing
+
+            </h3>
+
+            <p>
+
+                Download or share QR codes directly from your device.
+
+            </p>
+
+        </div>
+
+        <div class="feature">
+
+            <i class="fa-solid fa-camera"></i>
+
+            <h3>
+
+                Built-in Scanner
+
+            </h3>
+
+            <p>
+
+                Scan QR codes using your device camera.
+
+            </p>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<!-- QRCode.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<!-- Html5 QR Scanner -->
+<script src="https://unpkg.com/html5-qrcode"></script>
+
+    <script src="{{ url_for('static', filename='js/qr.js') }}"></script>
+    <script src="/static/js/qr.js"></script>
+
+</body>
+
+</html>

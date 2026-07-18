@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz Result | One For All</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/quiz.css') }}">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="bg1"></div>
+<div class="bg2"></div>
+
+<div class="result-container">
+
+    <!-- Trophy -->
+
+    <div class="trophy">
+
+        <i class="fa-solid fa-trophy"></i>
+
+    </div>
+
+    <!-- Heading -->
+
+    <h1>
+
+        Quiz Completed!
+
+    </h1>
+
+    <p>
+
+        Great effort. Here is your performance.
+
+    </p>
+
+
+    <!-- Score Circle -->
+
+    <div class="score-circle">
+
+        <span class="score-percent">
+
+            {{ per|round(0) }}%
+
+        </span>
+
+    </div>
+
+
+    <!-- Stats -->
+
+    <div class="result-grid">
+
+        <div class="result-card">
+
+            <i class="fa-solid fa-check"></i>
+
+            <h2>
+
+                {{ score }}
+
+            </h2>
+
+            <p>
+
+                Correct Answers
+
+            </p>
+
+        </div>
+
+        <div class="result-card">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            <h2>
+
+                {{ grade }}
+
+            </h2>
+
+            <p>
+
+                Grade
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Comment -->
+
+    <div class="comment-box">
+
+        <i class="fa-solid fa-message"></i>
+
+        <h3>
+
+            {{ comment }}
+
+        </h3>
+
+    </div>
+
+
+
+    <!-- Buttons -->
+
+    <div class="result-buttons">
+
+        <a href="/" class="retry-btn">
+
+            <i class="fa-solid fa-rotate-right"></i>
+
+            Try Again
+
+        </a>
+
+        <a href="/" class="home-btn">
+
+            <i class="fa-solid fa-house"></i>
+
+            Dashboard
+
+        </a>
+
+    </div>
+
+
+    <!-- Performance -->
+
+    <div class="performance-box">
+
+        {% if grade == "A" %}
+
+        <i class="fa-solid fa-medal performance gold"></i>
+
+        <h2>Outstanding!</h2>
+
+        <p>
+
+            You have excellent knowledge in this category.
+
+        </p>
+
+        {% elif grade == "B" %}
+
+        <i class="fa-solid fa-award performance silver"></i>
+
+        <h2>Very Good!</h2>
+
+        <p>
+
+            A little more practice and you'll reach the top.
+
+        </p>
+
+        {% elif grade == "C" %}
+
+        <i class="fa-solid fa-star performance bronze"></i>
+
+        <h2>Good Job!</h2>
+
+        <p>
+
+            You're doing well. Keep learning.
+
+        </p>
+
+        {% elif grade == "D" %}
+
+        <i class="fa-solid fa-book performance blue"></i>
+
+        <h2>Nice Try!</h2>
+
+        <p>
+
+            Practice regularly to improve your score.
+
+        </p>
+
+        {% elif grade == "E" %}
+
+        <i class="fa-solid fa-lightbulb performance orange"></i>
+
+        <h2>Keep Practicing!</h2>
+
+        <p>
+
+            Every quiz makes you better.
+
+        </p>
+
+        {% else %}
+
+        <i class="fa-solid fa-seedling performance red"></i>
+
+        <h2>Don't Give Up!</h2>
+
+        <p>
+
+            Failure is the first step towards success.
+
+        </p>
+
+        {% endif %}
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/quiz.js') }}"></script>
+
+</body>
+
+</html>

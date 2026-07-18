@@ -1,0 +1,1294 @@
+/* ================================
+        GOOGLE FONT
+================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+
+/* ================================
+        VARIABLES
+================================ */
+
+:root{
+
+    --bg:#0f172a;
+    --card:rgba(30,41,59,.65);
+    --card-hover:rgba(51,65,85,.75);
+
+    --primary:#3b82f6;
+    --primary-hover:#2563eb;
+
+    --danger:#ef4444;
+    --danger-hover:#dc2626;
+
+    --success:#22c55e;
+
+    --white:#ffffff;
+
+    --text:#f8fafc;
+    --text2:#cbd5e1;
+
+    --border:rgba(255,255,255,.08);
+
+    --shadow:
+        0 10px 35px rgba(0,0,0,.35);
+
+    --radius:18px;
+
+}
+
+
+/* ================================
+        RESET
+================================ */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+}
+
+
+/* ================================
+        BACKGROUND
+================================ */
+
+.bg-circle{
+
+    position:fixed;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+    z-index:-2;
+
+}
+
+.circle1{
+
+    width:350px;
+    height:350px;
+
+    background:#2563eb;
+
+    top:-100px;
+    left:-120px;
+
+    opacity:.35;
+
+}
+
+.circle2{
+
+    width:400px;
+    height:400px;
+
+    background:#9333ea;
+
+    bottom:-120px;
+    right:-120px;
+
+    opacity:.30;
+
+}
+
+
+/* ================================
+        CONTAINER
+================================ */
+
+.container{
+
+    width:min(1200px,92%);
+
+    margin:auto;
+
+    padding:45px 0 80px;
+
+}
+
+
+/* ================================
+        HEADER
+================================ */
+
+.topbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:30px;
+
+    margin-bottom:35px;
+
+    flex-wrap:wrap;
+
+}
+
+.left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.left h1{
+
+    font-size:34px;
+
+    font-weight:800;
+
+}
+
+.left p{
+
+    margin-top:5px;
+
+    color:var(--text2);
+
+}
+
+
+.back-btn{
+
+    width:52px;
+
+    height:52px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    backdrop-filter:blur(20px);
+
+    transition:.3s;
+
+}
+
+.back-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:var(--primary);
+
+}
+
+
+/* ================================
+        RIGHT BUTTONS
+================================ */
+
+.right{
+
+    display:flex;
+
+    gap:14px;
+
+    align-items:center;
+
+}
+
+
+.icon-btn{
+
+    width:52px;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:var(--card);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid var(--border);
+
+    transition:.3s;
+
+}
+
+.icon-btn:hover{
+
+    background:var(--primary);
+
+    transform:translateY(-3px);
+
+}
+
+
+.primary-btn{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:15px 28px;
+
+    border-radius:14px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.primary-btn:hover{
+
+    background:var(--primary-hover);
+
+    transform:translateY(-3px);
+
+}
+
+
+/* ================================
+        GLASS CARD
+================================ */
+
+.glass-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:var(--shadow);
+
+}
+
+
+/* ================================
+        SEARCH FORM
+================================ */
+
+.search-form{
+
+    display:none;
+
+    margin-bottom:25px;
+
+    padding:22px;
+
+    animation:fade .35s;
+
+}
+
+.search-form input{
+
+    width:100%;
+
+    margin-bottom:18px;
+
+}
+
+.search-form button{
+
+    width:100%;
+
+}
+
+
+/* ================================
+        NEW NOTE FORM
+================================ */
+
+.note-form{
+
+    display:none;
+
+    margin-bottom:35px;
+
+    padding:28px;
+
+    animation:fade .35s;
+
+}
+
+.note-form h2{
+
+    margin-bottom:20px;
+
+    font-size:25px;
+
+}
+
+.note-form textarea{
+
+    resize:vertical;
+
+    min-height:170px;
+
+}
+
+
+/* ================================
+        INPUTS
+================================ */
+
+input,
+textarea{
+
+    width:100%;
+
+    background:#111827;
+
+    color:white;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:14px;
+
+    padding:15px;
+
+    outline:none;
+
+    margin-bottom:18px;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+input:focus,
+textarea:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 4px rgba(59,130,246,.15);
+
+}
+
+
+/* ================================
+        BUTTONS
+================================ */
+
+button{
+
+    font-family:inherit;
+
+}
+
+#submit,
+#searchsubmit,
+.submiteditednote{
+
+    width:100%;
+
+    border:none;
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:15px;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+#submit:hover,
+#searchsubmit:hover,
+.submiteditednote:hover{
+
+    background:var(--primary-hover);
+
+}
+
+
+/* ================================
+        ANIMATION
+================================ */
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+/* ===================================
+        NOTES GRID
+=================================== */
+
+.notes-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+
+    gap:25px;
+
+    margin-top:20px;
+
+}
+
+
+/* ===================================
+        NOTE CARD
+=================================== */
+
+.note-card{
+
+    animation:fade .4s;
+
+}
+
+
+.titleslist{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:22px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:var(--shadow);
+
+    min-height:190px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+}
+
+.titleslist:hover{
+
+    transform:translateY(-8px);
+
+    background:var(--card-hover);
+
+    border-color:rgba(59,130,246,.45);
+
+}
+
+.titleslist h3{
+
+    font-size:22px;
+
+    margin-bottom:14px;
+
+    color:white;
+
+    font-weight:700;
+
+    word-break:break-word;
+
+}
+
+.titleslist p{
+
+    color:var(--text2);
+
+    line-height:1.7;
+
+    flex:1;
+
+    overflow:hidden;
+
+    display:-webkit-box;
+
+    -webkit-line-clamp: 4;
+
+    -webkit-box-orient:vertical;
+
+}
+
+.titleslist small{
+
+    margin-top:18px;
+
+    color:#94a3b8;
+
+}
+
+
+/* ===================================
+        EXPANDED NOTE
+=================================== */
+
+.noteslist{
+
+    display:none;
+
+    margin-top:18px;
+
+    padding:24px;
+
+    background:var(--card);
+
+    border-radius:18px;
+
+    border:1px solid var(--border);
+
+    backdrop-filter:blur(18px);
+
+    animation:fade .35s;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+.expanded-head{
+
+    padding-bottom:18px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.expanded-head h2{
+
+    font-size:28px;
+
+    word-break:break-word;
+
+}
+
+
+.expanded-body{
+
+    margin:25px 0;
+
+    color:var(--text2);
+
+    line-height:1.9;
+
+    white-space:pre-wrap;
+
+    word-break:break-word;
+
+}
+
+
+.expanded-footer{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    color:#94a3b8;
+
+    font-size:14px;
+
+    margin-bottom:25px;
+
+}
+
+
+/* ===================================
+        ACTION BUTTONS
+=================================== */
+
+.actions{
+
+    display:flex;
+
+    gap:14px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:20px;
+
+}
+
+.editnote{
+
+    flex:1;
+
+    border:none;
+
+    cursor:pointer;
+
+    background:#f59e0b;
+
+    color:white;
+
+    padding:13px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.editnote:hover{
+
+    background:#d97706;
+
+    transform:translateY(-3px);
+
+}
+
+.deletenote_form{
+
+    flex:1;
+
+}
+
+.deletenote{
+
+    width:100%;
+
+    border:none;
+
+    cursor:pointer;
+
+    background:var(--danger);
+
+    color:white;
+
+    padding:13px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.deletenote:hover{
+
+    background:var(--danger-hover);
+
+    transform:translateY(-3px);
+
+}
+
+
+/* ===================================
+        EDIT FORM
+=================================== */
+
+.editnote_form{
+
+    display:none;
+
+    margin-top:20px;
+
+    padding-top:20px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    animation:fade .35s;
+
+}
+
+.editnote_form input{
+
+    margin-bottom:15px;
+
+}
+
+.editnote_form textarea{
+
+    resize:vertical;
+
+    min-height:150px;
+
+}
+
+
+/* ===================================
+        SEARCH RESULT
+=================================== */
+
+.searchednote{
+
+    margin-bottom:35px;
+
+    padding:28px;
+
+    animation:fade .35s;
+
+    border-left:5px solid var(--success);
+
+}
+
+.searchednote .note-head{
+
+    margin-bottom:18px;
+
+}
+
+.searchednote h2{
+
+    font-size:28px;
+
+}
+
+.searchednote .note-body{
+
+    color:var(--text2);
+
+    line-height:1.9;
+
+    white-space:pre-wrap;
+
+    word-break:break-word;
+
+}
+
+.searchednote .note-footer{
+
+    margin-top:22px;
+
+    color:#94a3b8;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+}
+
+
+/* ===================================
+        ICON SPACING
+=================================== */
+
+button i{
+
+    margin-right:8px;
+
+}
+
+.back-btn i{
+
+    margin-right:0;
+
+}
+
+.note-footer i,
+.expanded-footer i{
+
+    margin-right:8px;
+
+}
+
+/* ===================================
+        EMPTY STATE
+=================================== */
+
+.empty-state{
+
+    margin-top:70px;
+
+    padding:70px 40px;
+
+    text-align:center;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+
+    backdrop-filter:blur(18px);
+
+    animation:fade .4s;
+
+}
+
+.empty-state i{
+
+    font-size:70px;
+
+    color:var(--primary);
+
+    margin-bottom:25px;
+
+}
+
+.empty-state h2{
+
+    font-size:32px;
+
+    margin-bottom:12px;
+
+}
+
+.empty-state p{
+
+    color:var(--text2);
+
+    max-width:500px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+}
+
+
+/* ===================================
+        SCROLLBAR
+=================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111827;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#3b82f6;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#2563eb;
+
+}
+
+
+/* ===================================
+        TEXT SELECTION
+=================================== */
+
+::selection{
+
+    background:#3b82f6;
+
+    color:white;
+
+}
+
+
+/* ===================================
+        LINKS
+=================================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+
+/* ===================================
+        TRANSITIONS
+=================================== */
+
+button,
+input,
+textarea,
+.titleslist,
+.noteslist,
+.glass-card{
+
+    transition:.3s ease;
+
+}
+
+
+/* ===================================
+        HOVER EFFECTS
+=================================== */
+
+.glass-card:hover{
+
+    border-color:rgba(59,130,246,.18);
+
+}
+
+.noteslist:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.note-form:hover,
+.search-form:hover{
+
+    transform:translateY(-2px);
+
+}
+
+
+/* ===================================
+        BUTTON ACTIVE
+=================================== */
+
+button:active{
+
+    transform:scale(.97);
+
+}
+
+
+/* ===================================
+        INPUT PLACEHOLDER
+=================================== */
+
+input::placeholder,
+textarea::placeholder{
+
+    color:#94a3b8;
+
+}
+
+
+/* ===================================
+        RESPONSIVE
+=================================== */
+
+@media(max-width:1000px){
+
+    .notes-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+
+@media(max-width:768px){
+
+    .container{
+
+        width:94%;
+
+        padding:30px 0 60px;
+
+    }
+
+    .topbar{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:20px;
+
+    }
+
+    .left{
+
+        width:100%;
+
+    }
+
+    .left h1{
+
+        font-size:28px;
+
+    }
+
+    .right{
+
+        width:100%;
+
+    }
+
+    .right button{
+
+        flex:1;
+
+    }
+
+    .notes-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .titleslist{
+
+        min-height:auto;
+
+    }
+
+    .expanded-head h2{
+
+        font-size:24px;
+
+    }
+
+    .actions{
+
+        flex-direction:column;
+
+    }
+
+    .editnote,
+    .deletenote_form{
+
+        width:100%;
+
+    }
+
+    .empty-state{
+
+        padding:50px 25px;
+
+    }
+
+}
+
+
+@media(max-width:500px){
+
+    .left{
+
+        gap:12px;
+
+    }
+
+    .back-btn{
+
+        width:46px;
+
+        height:46px;
+
+    }
+
+    .primary-btn{
+
+        padding:13px 18px;
+
+        font-size:14px;
+
+    }
+
+    .icon-btn{
+
+        width:46px;
+
+        height:46px;
+
+    }
+
+    .titleslist{
+
+        padding:18px;
+
+    }
+
+    .titleslist h3{
+
+        font-size:20px;
+
+    }
+
+    .titleslist p{
+
+        font-size:14px;
+
+    }
+
+    .noteslist{
+
+        padding:18px;
+
+    }
+
+    .expanded-head h2{
+
+        font-size:22px;
+
+    }
+
+    .expanded-body{
+
+        font-size:15px;
+
+        line-height:1.8;
+
+    }
+
+    .searchednote{
+
+        padding:20px;
+
+    }
+
+    .searchednote h2{
+
+        font-size:22px;
+
+    }
+
+    .note-form{
+
+        padding:22px;
+
+    }
+
+    .search-form{
+
+        padding:20px;
+
+    }
+
+}
+
+
+/* ===================================
+        LARGE SCREEN
+=================================== */
+
+@media(min-width:1400px){
+
+    .container{
+
+        max-width:1350px;
+
+    }
+
+}
+
+
+/* ===================================
+        UTILITIES
+=================================== */
+
+.hidden{
+
+    display:none !important;
+
+}
+
+.show{
+
+    display:block !important;
+
+}
+
+.flex{
+
+    display:flex !important;
+
+}
+
+.center{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}
+
+
+/* ===================================
+        FADE IN
+=================================== */
+
+.fade-in{
+
+    animation:fade .35s;
+
+}

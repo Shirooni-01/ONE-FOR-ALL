@@ -1,0 +1,1035 @@
+/* ==========================================
+                GOOGLE FONT
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+
+/* ==========================================
+                VARIABLES
+========================================== */
+
+:root{
+
+    --bg:#0f172a;
+
+    --card:rgba(30,41,59,.72);
+
+    --card-hover:rgba(51,65,85,.82);
+
+    --primary:#3b82f6;
+
+    --primary-dark:#2563eb;
+
+    --secondary:#334155;
+
+    --text:#ffffff;
+
+    --text-light:#cbd5e1;
+
+    --border:rgba(255,255,255,.08);
+
+    --radius:20px;
+
+    --shadow:
+        0 12px 40px rgba(0,0,0,.35);
+
+}
+
+
+/* ==========================================
+                RESET
+========================================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:"Inter",sans-serif;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+}
+
+
+/* ==========================================
+                BACKGROUND
+========================================== */
+
+.bg1,
+.bg2{
+
+    position:fixed;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+    z-index:-2;
+
+}
+
+.bg1{
+
+    width:340px;
+
+    height:340px;
+
+    background:#2563eb;
+
+    top:-120px;
+
+    left:-120px;
+
+    opacity:.35;
+
+}
+
+.bg2{
+
+    width:420px;
+
+    height:420px;
+
+    background:#9333ea;
+
+    right:-140px;
+
+    bottom:-140px;
+
+    opacity:.28;
+
+}
+
+
+/* ==========================================
+                CONTAINER
+========================================== */
+
+.container{
+
+    width:min(1250px,92%);
+
+    margin:auto;
+
+    padding:45px 0 80px;
+
+}
+
+
+/* ==========================================
+                HEADER
+========================================== */
+
+header{
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+}
+
+.back-btn{
+
+    width:54px;
+
+    height:54px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:25px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    backdrop-filter:blur(18px);
+
+    transition:.3s;
+
+}
+
+.back-btn:hover{
+
+    background:var(--primary);
+
+    transform:translateY(-4px);
+
+}
+
+header h1{
+
+    font-size:44px;
+
+    font-weight:800;
+
+    margin-bottom:12px;
+
+}
+
+header p{
+
+    color:var(--text-light);
+
+    font-size:17px;
+
+}
+
+
+/* ==========================================
+                GRID
+========================================== */
+
+.main-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:30px;
+
+    margin-bottom:60px;
+
+}
+
+
+/* ==========================================
+                CARD
+========================================== */
+
+.generator-card,
+.scanner-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:var(--shadow);
+
+    padding:30px;
+
+    animation:fade .4s;
+
+}
+
+.generator-card h2,
+.scanner-card h2{
+
+    margin-bottom:22px;
+
+    font-size:28px;
+
+}
+
+
+/* ==========================================
+                INPUT
+========================================== */
+
+.input-group{
+
+    margin-bottom:22px;
+
+}
+
+.input-group input{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:14px;
+
+    background:#111827;
+
+    color:white;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.input-group input:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 4px rgba(59,130,246,.15);
+
+}
+
+
+/* ==========================================
+                BUTTONS
+========================================== */
+
+.button-group{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-top:18px;
+
+}
+
+.primary-btn,
+.secondary-btn{
+
+    flex:1;
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:15px;
+
+    border-radius:14px;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.primary-btn{
+
+    background:var(--primary);
+
+}
+
+.primary-btn:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-4px);
+
+}
+
+.secondary-btn{
+
+    background:var(--secondary);
+
+}
+
+.secondary-btn:hover{
+
+    background:#475569;
+
+    transform:translateY(-4px);
+
+}
+
+.primary-btn i,
+.secondary-btn i{
+
+    margin-right:10px;
+
+}
+
+
+/* ==========================================
+                ANIMATION
+========================================== */
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+/* ==========================================
+                QR PREVIEW
+========================================== */
+
+.qr-preview{
+
+    margin-top:30px;
+
+    min-height:300px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#111827;
+
+    border:2px dashed rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    transition:.35s;
+
+}
+
+.qr-preview:hover{
+
+    border-color:var(--primary);
+
+}
+
+#qrcode{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+#qrcode img,
+#qrcode canvas{
+
+    border-radius:12px;
+
+    background:white;
+
+    padding:10px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+
+}
+
+
+/* ==========================================
+                SCANNER
+========================================== */
+
+#reader{
+
+    margin:25px 0;
+
+    width:100%;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    border:2px solid rgba(255,255,255,.08);
+
+    background:#111827;
+
+    min-height:280px;
+
+}
+
+
+/* ==========================================
+                RESULT BOX
+========================================== */
+
+.result-box{
+
+    margin-top:20px;
+
+}
+
+.result-box label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    font-weight:600;
+
+    color:var(--text-light);
+
+}
+
+.result-box textarea{
+
+    width:100%;
+
+    min-height:120px;
+
+    resize:none;
+
+    padding:16px;
+
+    border-radius:14px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:#111827;
+
+    color:white;
+
+    outline:none;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+.result-box textarea:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 4px rgba(59,130,246,.15);
+
+}
+
+
+/* ==========================================
+                FEATURES
+========================================== */
+
+.features{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+.feature{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    text-align:center;
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.feature:hover{
+
+    transform:translateY(-8px);
+
+    background:var(--card-hover);
+
+}
+
+.feature i{
+
+    font-size:42px;
+
+    color:var(--primary);
+
+    margin-bottom:18px;
+
+}
+
+.feature h3{
+
+    font-size:22px;
+
+    margin-bottom:12px;
+
+}
+
+.feature p{
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+}
+
+
+/* ==========================================
+            CARD HOVER EFFECTS
+========================================== */
+
+.generator-card:hover,
+.scanner-card:hover{
+
+    border-color:rgba(59,130,246,.25);
+
+}
+
+.generator-card,
+.scanner-card,
+.feature{
+
+    transition:.35s ease;
+
+}
+
+
+/* ==========================================
+            BUTTON SHADOW
+========================================== */
+
+.primary-btn:hover{
+
+    box-shadow:0 10px 25px rgba(59,130,246,.35);
+
+}
+
+.secondary-btn:hover{
+
+    box-shadow:0 10px 25px rgba(71,85,105,.35);
+
+}
+
+
+/* ==========================================
+            QR IMAGE ANIMATION
+========================================== */
+
+#qrcode img,
+#qrcode canvas{
+
+    animation:fade .4s;
+
+}
+
+
+/* ==========================================
+            SCANNER VIDEO
+========================================== */
+
+#reader video{
+
+    border-radius:18px;
+
+}
+
+
+/* ==========================================
+            TEXT SELECTION
+========================================== */
+
+::selection{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+/* ==========================================
+                RESPONSIVE
+========================================== */
+
+@media(max-width:1000px){
+
+    .main-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .features{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .container{
+
+        width:94%;
+
+        padding:35px 0 60px;
+
+    }
+
+    header h1{
+
+        font-size:34px;
+
+    }
+
+    header p{
+
+        font-size:15px;
+
+    }
+
+    .generator-card,
+    .scanner-card{
+
+        padding:22px;
+
+    }
+
+    .button-group{
+
+        flex-direction:column;
+
+    }
+
+    .primary-btn,
+    .secondary-btn{
+
+        width:100%;
+
+    }
+
+    .features{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:500px){
+
+    .container{
+
+        width:95%;
+
+    }
+
+    .back-btn{
+
+        width:46px;
+
+        height:46px;
+
+    }
+
+    .generator-card h2,
+    .scanner-card h2{
+
+        font-size:22px;
+
+    }
+
+    .input-group input{
+
+        padding:14px;
+
+        font-size:15px;
+
+    }
+
+    .result-box textarea{
+
+        min-height:110px;
+
+    }
+
+    .feature{
+
+        padding:22px;
+
+    }
+
+    .feature i{
+
+        font-size:34px;
+
+    }
+
+    .feature h3{
+
+        font-size:20px;
+
+    }
+
+}
+
+
+/* ==========================================
+                SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111827;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary-dark);
+
+}
+
+
+/* ==========================================
+                TOAST
+========================================== */
+
+.toast{
+
+    position:fixed;
+
+    top:25px;
+
+    right:25px;
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:15px 24px;
+
+    border-radius:12px;
+
+    box-shadow:var(--shadow);
+
+    opacity:0;
+
+    transform:translateY(-20px);
+
+    transition:.35s;
+
+    z-index:9999;
+
+}
+
+.toast.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+/* ==========================================
+                RIPPLE
+========================================== */
+
+button{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.ripple{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    transform:scale(0);
+
+    background:rgba(255,255,255,.35);
+
+    animation:ripple .6s linear;
+
+    pointer-events:none;
+
+}
+
+@keyframes ripple{
+
+    to{
+
+        transform:scale(4);
+
+        opacity:0;
+
+    }
+
+}
+
+
+/* ==========================================
+            LOADING ANIMATION
+========================================== */
+
+.loading{
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+/* ==========================================
+            QR HOVER EFFECT
+========================================== */
+
+#qrcode img:hover,
+#qrcode canvas:hover{
+
+    transform:scale(1.04);
+
+    transition:.3s;
+
+}
+
+
+/* ==========================================
+            INPUT PLACEHOLDER
+========================================== */
+
+input::placeholder,
+textarea::placeholder{
+
+    color:#94a3b8;
+
+}
+
+
+/* ==========================================
+            DISABLED BUTTON
+========================================== */
+
+button:disabled{
+
+    opacity:.6;
+
+    cursor:not-allowed;
+
+}
+
+
+/* ==========================================
+            SMOOTH TRANSITIONS
+========================================== */
+
+button,
+input,
+textarea,
+.generator-card,
+.scanner-card,
+.feature{
+
+    transition:.3s ease;
+
+}
+
+
+/* ==========================================
+                UTILITIES
+========================================== */
+
+.hidden{
+
+    display:none !important;
+
+}
+
+.flex{
+
+    display:flex !important;
+
+}
+
+.center{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.fade{
+
+    animation:fade .4s;
+
+}

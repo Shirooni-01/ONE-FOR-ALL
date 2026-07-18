@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz | One For All</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/quiz.css') }}">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="bg1"></div>
+<div class="bg2"></div>
+
+<div class="quiz-container">
+
+    <!-- Header -->
+
+    <header class="quiz-header">
+
+        <div>
+
+            <h2>
+
+                Quiz Master
+
+            </h2>
+
+            <p>
+
+                Question {{ current }} of {{ total }}
+
+            </p>
+
+        </div>
+
+        <div class="question-count">
+
+            {{ current }}/{{ total }}
+
+        </div>
+
+    </header>
+
+
+
+    <!-- Progress -->
+
+    <div class="progress-area">
+
+        <div class="progress-bar">
+
+            <div class="progress-fill"
+                style="width: {{ progress }}%;">
+
+            </div>
+
+        </div>
+
+        <span>
+
+            {{ progress|round(0) }}%
+
+        </span>
+
+    </div>
+
+
+
+    <!-- Question -->
+
+    <div class="question-card">
+
+        <h1>
+
+            {{ question|safe }}
+
+        </h1>
+
+    </div>
+
+
+
+    <!-- Options -->
+
+    <form method="POST" id="quizForm">
+
+        <div class="options">
+
+            {% for option in options %}
+
+            <label class="option-card">
+
+                <input
+                    type="radio"
+                    name="answer"
+                    value="{{ option }}"
+                    required>
+
+                <span>
+
+                    {{ option|safe }}
+
+                </span>
+
+            </label>
+
+            {% endfor %}
+
+        </div>
+
+
+
+        <!-- Footer -->
+
+        <div class="quiz-footer">
+
+            <button
+                class="next-btn"
+                type="submit">
+
+                Next Question
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </div>
+
+    </form>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/quiz.js') }}"></script>
+
+</body>
+
+</html>
