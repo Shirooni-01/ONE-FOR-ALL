@@ -156,6 +156,10 @@ def init_password(app):
 
         user_id = session.get("user_id")
         password_history = get_user_history(user_id)
+        # list_len = len(password_history)  # Get the length of the password history list
+
+        # all password form list and dict 
+        passwords = [entry['password'] for entry in password_history] if password_history else None
 
         if request.method == "POST":
 
@@ -177,7 +181,7 @@ def init_password(app):
                 generated_password=generated_password,
                 rating=rating,
                 score=score,
-                password_history=password_history,
+                password_history=passwords,
             )
 
         return render_template(
@@ -185,5 +189,5 @@ def init_password(app):
             generated_password=None,
             rating=None,
             score=0,
-            password_history=password_history,
+            password_history=passwords,
         )
