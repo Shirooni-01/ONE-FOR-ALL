@@ -212,9 +212,10 @@ This project is licensed under the MIT License.
 
 ## 👨‍💻 Author
 
-**Shirooni**
+**Ashutosh Shioorkar [ Shirooni ]**
 
 GitHub: https://github.com/Shirooni-01
+---
 Deployed : https://one-for-all-01.up.railway.app/
 
 ---
