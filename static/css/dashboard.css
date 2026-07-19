@@ -11,25 +11,25 @@
 
 :root{
 
-    --bg:#0f172a;
+    --bg:#191919;
 
-    --sidebar:#111827;
+    --sidebar:#171717;
 
-    --card:rgba(30,41,59,.72);
+    --card:#202020;
 
-    --card-hover:rgba(51,65,85,.82);
+    --card-hover:#262626;
 
-    --primary:#3b82f6;
+    --primary:#3B82F6;
 
-    --primary-dark:#2563eb;
+    --primary-dark:#2563EB;
 
-    --text:#ffffff;
+    --text:#F5F5F5;
 
-    --text-light:#cbd5e1;
+    --text-light:#A1A1AA;
 
-    --border:rgba(255,255,255,.08);
+    --border:#2F2F2F;
 
-    --shadow:0 12px 40px rgba(0,0,0,.35);
+    --shadow:0 1px 2px rgba(0,0,0,.20);
 
 }
 
@@ -71,20 +71,7 @@ body{
                 BACKGROUND
 ========================================== */
 
-.bg1,
-.bg2{
-
-    position:fixed;
-
-    border-radius:50%;
-
-    filter:blur(120px);
-
-    z-index:-2;
-
-}
-
-.bg1{
+/* .bg1{
 
     width:360px;
 
@@ -114,7 +101,7 @@ body{
 
     opacity:.28;
 
-}
+} */
 
 a{
     color:inherit;
@@ -223,7 +210,8 @@ a{
 
 .sidebar nav a.active{
 
-    background:var(--primary);
+    background:#262626;
+border:1px solid #3B82F6;
 
     color:white;
 
@@ -361,7 +349,7 @@ a{
 
     border-radius:20px;
 
-    backdrop-filter:blur(18px);
+    
 
     box-shadow:var(--shadow);
 
@@ -449,7 +437,7 @@ a{
 
     padding:28px;
 
-    backdrop-filter:blur(18px);
+    
 
     box-shadow:var(--shadow);
 
@@ -530,7 +518,7 @@ a{
 
     border-radius:22px;
 
-    backdrop-filter:blur(18px);
+    
 
     box-shadow:var(--shadow);
 
@@ -633,7 +621,7 @@ a{
 
     border-radius:20px;
 
-    backdrop-filter:blur(18px);
+    
 
     box-shadow:var(--shadow);
 
@@ -647,7 +635,7 @@ a{
 
 .tip-card:hover{
 
-    transform:translateY(-8px);
+    transform:translateY(-3px);
 
     background:var(--card-hover);
 
@@ -736,48 +724,6 @@ footer{
 
 }
 
-.app-card::before,
-.stat-card::before,
-.tip-card::before,
-.activity-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:0;
-
-    left:-120%;
-
-    width:70%;
-
-    height:100%;
-
-    background:linear-gradient(
-
-        90deg,
-
-        transparent,
-
-        rgba(255,255,255,.08),
-
-        transparent
-
-    );
-
-    transition:.7s;
-
-}
-
-.app-card:hover::before,
-.stat-card:hover::before,
-.tip-card:hover::before,
-.activity-card:hover::before{
-
-    left:130%;
-
-}
-
 
 /* ==========================================
             TEXT SELECTION
@@ -800,7 +746,7 @@ footer{
 
     border-color:var(--primary);
 
-    box-shadow:0 0 0 4px rgba(59,130,246,.15);
+    box-shadow:none;
 
 }
 
@@ -941,7 +887,7 @@ footer{
 
 ::-webkit-scrollbar-track{
 
-    background:#111827;
+    background:#171717;
 
 }
 
@@ -1014,7 +960,8 @@ button,
 
     right:25px;
 
-    background:var(--primary);
+    background:#202020;
+border:1px solid #3B82F6;
 
     color:white;
 
@@ -1107,7 +1054,7 @@ button,
 
 .sidebar nav a:hover i{
 
-    transform:scale(1.1);
+    transform:scale(1.05);
 
 }
 

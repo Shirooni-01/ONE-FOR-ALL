@@ -8,30 +8,33 @@
 /* ================================
         VARIABLES
 ================================ */
-
 :root{
 
-    --bg:#0f172a;
-    --card:rgba(30,41,59,.65);
-    --card-hover:rgba(51,65,85,.75);
+    --bg:#191919;
 
-    --primary:#3b82f6;
-    --primary-hover:#2563eb;
+    --card:#202020;
 
-    --danger:#ef4444;
-    --danger-hover:#dc2626;
+    --card-hover:#262626;
 
-    --success:#22c55e;
+    --primary:#2563EB;
 
-    --white:#ffffff;
+    --primary-hover:#1D4ED8;
 
-    --text:#f8fafc;
-    --text2:#cbd5e1;
+    --danger:#DC2626;
 
-    --border:rgba(255,255,255,.08);
+    --danger-hover:#B91C1C;
 
-    --shadow:
-        0 10px 35px rgba(0,0,0,.35);
+    --success:#22C55E;
+
+    --white:#F5F5F5;
+
+    --text:#F5F5F5;
+
+    --text2:#A1A1AA;
+
+    --border:#2F2F2F;
+
+    --shadow:0 1px 2px rgba(0,0,0,.20);
 
     --radius:18px;
 
@@ -68,50 +71,6 @@ body{
 
 }
 
-
-/* ================================
-        BACKGROUND
-================================ */
-
-.bg-circle{
-
-    position:fixed;
-
-    border-radius:50%;
-
-    filter:blur(120px);
-
-    z-index:-2;
-
-}
-
-.circle1{
-
-    width:350px;
-    height:350px;
-
-    background:#2563eb;
-
-    top:-100px;
-    left:-120px;
-
-    opacity:.35;
-
-}
-
-.circle2{
-
-    width:400px;
-    height:400px;
-
-    background:#9333ea;
-
-    bottom:-120px;
-    right:-120px;
-
-    opacity:.30;
-
-}
 
 
 /* ================================
@@ -198,7 +157,7 @@ body{
 
     border-radius:14px;
 
-    backdrop-filter:blur(20px);
+    
 
     transition:.3s;
 
@@ -208,7 +167,8 @@ body{
 
     transform:translateY(-3px);
 
-    background:var(--primary);
+    background:#262626;
+border-color:var(--primary);
 
 }
 
@@ -246,7 +206,7 @@ body{
 
     font-size:18px;
 
-    backdrop-filter:blur(18px);
+    
 
     border:1px solid var(--border);
 
@@ -256,7 +216,8 @@ body{
 
 .icon-btn:hover{
 
-    background:var(--primary);
+    background:#262626;
+border-color:var(--primary);
 
     transform:translateY(-3px);
 
@@ -289,7 +250,7 @@ body{
 
     background:var(--primary-hover);
 
-    transform:translateY(-3px);
+    transform:translateY(-1px);
 
 }
 
@@ -306,7 +267,7 @@ body{
 
     border-radius:var(--radius);
 
-    backdrop-filter:blur(18px);
+    
 
     box-shadow:var(--shadow);
 
@@ -386,11 +347,11 @@ textarea{
 
     width:100%;
 
-    background:#111827;
+    background:#1B1B1B;
 
     color:white;
 
-    border:1px solid rgba(255,255,255,.08);
+    border:1px solid var(--border);
 
     border-radius:14px;
 
@@ -411,7 +372,7 @@ textarea:focus{
 
     border-color:var(--primary);
 
-    box-shadow:0 0 0 4px rgba(59,130,246,.15);
+    box-shadow:none;
 
 }
 
@@ -515,7 +476,7 @@ button{
 
 .titleslist{
 
-    background:var(--card);
+    background:#222222;
 
     border:1px solid var(--border);
 
@@ -527,7 +488,7 @@ button{
 
     transition:.35s;
 
-    backdrop-filter:blur(18px);
+    
 
     box-shadow:var(--shadow);
 
@@ -543,11 +504,11 @@ button{
 
 .titleslist:hover{
 
-    transform:translateY(-8px);
+    transform:translateY(-3px);
 
-    background:var(--card-hover);
+    background:#2A2A2A;
 
-    border-color:rgba(59,130,246,.45);
+    border-color:var(--primary);
 
 }
 
@@ -610,8 +571,6 @@ button{
 
     border:1px solid var(--border);
 
-    backdrop-filter:blur(18px);
-
     animation:fade .35s;
 
     box-shadow:var(--shadow);
@@ -623,7 +582,7 @@ button{
 
     padding-bottom:18px;
 
-    border-bottom:1px solid rgba(255,255,255,.08);
+    border-bottom:1px solid var(--border);
 
 }
 
@@ -876,8 +835,6 @@ button i{
 
     border-radius:22px;
 
-    backdrop-filter:blur(18px);
-
     animation:fade .4s;
 
 }
@@ -925,7 +882,7 @@ button i{
 
 ::-webkit-scrollbar-track{
 
-    background:#111827;
+    background:#171717;
 
 }
 
@@ -991,22 +948,16 @@ textarea,
 =================================== */
 
 .glass-card:hover{
-
-    border-color:rgba(59,130,246,.18);
-
+    border-color:var(--primary);
 }
 
 .noteslist:hover{
-
-    transform:translateY(-3px);
-
+    transform:translateY(-1px);
 }
 
 .note-form:hover,
 .search-form:hover{
-
-    transform:translateY(-2px);
-
+    transform:none;
 }
 
 
@@ -1016,7 +967,7 @@ textarea,
 
 button:active{
 
-    transform:scale(.97);
+    transform:scale(.99);
 
 }
 
