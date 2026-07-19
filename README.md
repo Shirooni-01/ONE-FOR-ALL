@@ -214,9 +214,12 @@ This project is licensed under the MIT License.
 
 **Ashutosh Shioorkar [ Shirooni ]**
 
-GitHub: https://github.com/Shirooni-01
 ---
+
+```text
+GitHub: https://github.com/Shirooni-01
 Deployed : https://one-for-all-01.up.railway.app/
+```
 
 ---
 
