@@ -5,231 +5,209 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>AI Chat | One For All</title>
 
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='css/ai_chat.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ai_chat.css') }}">
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
 
 <body>
 
-<div class="bg1"></div>
-<div class="bg2"></div>
+    <div class="bg1"></div>
+    <div class="bg2"></div>
 
-<div class="container">
+    <div class="container">
 
-    <!-- =========================
+        <!-- =========================
             SIDEBAR
     ========================== -->
 
-    <aside class="sidebar">
+        <aside class="sidebar">
 
-        <div class="logo">
+            <div class="logo">
 
-            <i class="fa-solid fa-robot"></i>
+                <i class="fa-solid fa-robot"></i>
 
-            <h2>
+                <h2>
 
-                One AI
+                    One AI
 
-            </h2>
+                </h2>
 
-        </div>
+            </div>
 
-        <button
-            id="newChatBtn"
-            class="new-chat">
+            <button id="newChatBtn" class="new-chat">
 
-            <i class="fa-solid fa-plus"></i>
+                <i class="fa-solid fa-plus"></i>
 
-            New Chat
+                New Chat
 
-        </button>
+            </button>
 
-        <div class="history">
+            <div class="history">
 
-            <h3>
+                <h3>
 
-                Recent Chats
+                    Recent Chats
 
-            </h3>
+                </h3>
 
-            <ul>
+                <ul>
 
-                <li>
+                    <li>
 
-                    Welcome Conversation
+                        Welcome Conversation
 
-                </li>
+                    </li>
 
-                <li>
+                    <li>
 
-                    Programming Help
+                        Programming Help
 
-                </li>
+                    </li>
 
-                <li>
+                    <li>
 
-                    Study Notes
+                        Study Notes
 
-                </li>
+                    </li>
 
-            </ul>
+                </ul>
 
-        </div>
+            </div>
 
-    </aside>
+        </aside>
+
+
+
+        <!-- =========================
+            CHAT AREA
+    ========================== -->
+
+        <main class="chat-container">
+
+            <header class="chat-header">
+
+
+
+
+                <a href="/" class="back-btn">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+                <div>
+                    <h1>
+
+
+                        AI Assistant
+
+                    </h1>
+                </div>
+
+                <button id="clearChatBtn" class="clear-btn">
+
+                    <i class="fa-solid fa-trash"></i>
+
+                    Clear
+
+                </button>
+
+            </header>
+
+
+
+            <!-- =========================
+                CHAT BOX
+        ========================== -->
+
+            <div id="chatBox" class="chat-box">
+
+                <div class="message ai">
+
+                    <div class="avatar">
+
+                        <i class="fa-solid fa-robot"></i>
+
+                    </div>
+
+                    <div class="bubble">
+
+                        👋 Hello!
+
+                        <br><br>
+
+                        I am your AI assistant.
+
+                        Ask me anything.
+
+                    </div>
+
+                </div>
+
+                <!-- =========================
+                    TYPING INDICATOR
+            ========================== -->
+
+                <div id="typingIndicator" class="message ai typing" style="display:none;">
+
+                    <div class="avatar">
+
+                        <i class="fa-solid fa-robot"></i>
+
+                    </div>
+
+                    <div class="bubble">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                INPUT AREA
+        ========================== -->
+
+            <div class="input-area">
+
+                <textarea id="userInput" rows="1" placeholder="Message One AI..."></textarea>
+
+                <button id="sendBtn">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                </button>
+
+            </div>
+
+        </main>
+
+    </div>
 
 
 
     <!-- =========================
-            CHAT AREA
-    ========================== -->
-
-    <main class="chat-container">
-
-        <header class="chat-header">
-
-            <div>
-
-                <h1>
-
-                    AI Assistant
-
-                </h1>
-
-                <p>
-
-                    Powered by Gemini 2.5 Flash
-
-                </p>
-
-            </div>
-
-            <button
-                id="clearChatBtn"
-                class="clear-btn">
-
-                <i class="fa-solid fa-trash"></i>
-
-                Clear
-
-            </button>
-
-        </header>
-
-
-
-        <!-- =========================
-                CHAT BOX
-        ========================== -->
-
-        <div
-            id="chatBox"
-            class="chat-box">
-
-            <div class="message ai">
-
-                <div class="avatar">
-
-                    <i class="fa-solid fa-robot"></i>
-
-                </div>
-
-                <div class="bubble">
-
-                    👋 Hello!
-
-                    <br><br>
-
-                    I am your AI assistant.
-
-                    Ask me anything.
-
-                </div>
-
-            </div>
-
-                        <!-- =========================
-                    TYPING INDICATOR
-            ========================== -->
-
-            <div
-                id="typingIndicator"
-                class="message ai typing"
-                style="display:none;">
-
-                <div class="avatar">
-
-                    <i class="fa-solid fa-robot"></i>
-
-                </div>
-
-                <div class="bubble">
-
-                    <span></span>
-                    <span></span>
-                    <span></span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- =========================
-                INPUT AREA
-        ========================== -->
-
-        <div class="input-area">
-
-            <textarea
-
-                id="userInput"
-
-                rows="1"
-
-                placeholder="Message One AI..."></textarea>
-
-            <button
-                id="sendBtn">
-
-                <i class="fa-solid fa-paper-plane"></i>
-
-            </button>
-
-        </div>
-
-    </main>
-
-</div>
-
-
-
-<!-- =========================
         TOAST
 ========================== -->
 
-<div
-    id="toast"
-    class="toast">
+    <div id="toast" class="toast">
 
-    Message Sent
+        Message Sent
 
-</div>
+    </div>
 
 
 
-<script src="{{ url_for('static', filename='js/ai_chat.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/ai_chat.js') }}"></script>
 
 </body>
 

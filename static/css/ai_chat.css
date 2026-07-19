@@ -139,6 +139,52 @@ body{
 
 }
 
+/* ========================
+    BAck btn
+    ==================*/
+
+
+.back-btn{
+
+    width:52px;
+
+    height:52px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    backdrop-filter:blur(20px);
+
+    transition:.3s;
+
+}
+
+.back-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:var(--primary);
+
+}
+
+.back-btn i{
+
+    margin-right:0;
+
+}
 
 /* ==========================================
                 SIDEBAR

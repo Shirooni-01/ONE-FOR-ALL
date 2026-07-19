@@ -1,6 +1,7 @@
 import os
 import sys
 import logging
+import random
 from datetime import datetime
 
 from flask import Flask, flash, redirect, render_template, request, session, url_for
@@ -100,7 +101,9 @@ def forbidden(error):
 
 @app.route("/")
 def dashboard():
-    return render_template("dashboard.html", user_name=session.get("name"))
+    emoji_list = ["😀", "😃", "😄", "😁", "😆", "😅", "😂", "🤣", "😊", "😇","😺", "😸", "😹", "🐱", "🦁"]
+    emoji = emoji_list[random.randint(0, len(emoji_list) - 1)]
+    return render_template("dashboard.html", user_name=session.get("username").capitalize() if session.get("username") else "Guest", emoji=emoji)
 
 # ===============================
 # QR Generator
